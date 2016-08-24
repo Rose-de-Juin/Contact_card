@@ -1,0 +1,25 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+body{
+	width: 970px;
+	height: auto;
+	margin: 20px;
+	padding: 20px;
+}
+form, #display{
+	display: inline-block;
+	vertical-align: top;
+}
+form{
+	width: 220px;
+	height: auto;
+}
+textarea{
+	width: 210px;
+	height: 100px;
+}
+#display{
+	width: 300px;
+}

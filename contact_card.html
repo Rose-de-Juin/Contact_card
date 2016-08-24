@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charser="UTF-8">
+		<title>Contact Catd Assignment</title>
+		<link rel="stylesheet" type="text/css" href="contact_card.css">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("form").submit(function(){
+					$("#display").append("<div class='tile'><div class='front'><h1>" + $("#fn").val()+ " " + $("#ln").val() + "</h1>" + "<p>Click for description!</p></div>" + "<div class='back' style='display: none''><p>" + $("#description").val() + "</p></div></div>");
+					return false;
+				});
+				$("#display").on("click", ".tile", function(e){
+					
+					console.log(e);
+					$(this).children('.front').hide();
+					$(this).children('.back').show();
+				});
+			});
+
+		</script>
+	</head>
+	<body>
+		<form>	
+			First Name: <input Type="text" id="fn">
+			Last Name: <input Type="text" id="ln">
+			Description: <textarea Type="text" id="description"></textarea>
+			<input type="submit" value="Add User">
+		</form>
+		<div id="display">
+		</div>
+	</body>
+</html>
